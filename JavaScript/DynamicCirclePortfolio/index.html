@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javascriptで動的Webサイト</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link 
+    hrel="https://fonts.googleapis.com/css2?family=Ubuntu:ital, wghg@1,300&display=swap"
+    rel="stylesheet"
+    />
+</head>
+<body>
+    <div class="main">
+        <nav>
+            <div class="logo-area">
+            <img src="./images/logo.png" class="logo" />
+            <h2>My Portfolio</h2>
+            </div><!-- logo-area -->
+
+            <div class="nav-links">
+                <ul>
+                    <a href="#"><li>Home</li></a>
+                    <a href="#"><li>products</li></a>
+                    <a href="#"><li>Portfolio</li></a>
+                    <a href="#"><li>Contact</li></a>
+                </ul>
+            </div><!-- nav-links -->
+        </nav>
+
+        <div class="infomation">
+            <div class="overlay"></div>
+            <img src="./images/pc.png" class="mobile">
+            <div id="circle">
+                <div class="feature one">
+                    <img src="./images/drone.png" alt="">
+                <div>
+                    <h1>Drone</h1>
+                    <p>Drone programing.</p>
+                </div>
+                </div><!-- feature one -->
+                <div class="feature two">
+                <img src="./images/ai.png" alt="">
+                <div>
+                    <h1>AI</h1>
+                    <p>Generative AI system</p>
+                </div>
+            </div>
+        <div class="feature three">
+            <img src="./images/fintech.png" alt="">
+            <div>
+                <h1>Blockchain</h1>
+                <p>blockchain system</p>
+            </div>
+        </div>
+        <div class="feature four">
+            <img src="./images/webdesign.png" alt="">
+            <div>
+                <h1>Web Design</h1>
+                <p>Responsive Web Design.</p>
+            </div>
+        </div>
+        </div>
+        </div>
+
+        <div class="control">
+            <img src="./images/arrow.png" id="upBtn">
+            <h3>Feature</h3>
+            <img src="./images/arrow.png" id="downBtn">
+        </div>
+    </div>
+    
+    <script>
+        //画像を回転させる  //各要素を取得
+        var circle = document.getElementById("circle");
+        var upBtn = document.getElementById("upBtn");
+        var downBtn = document.getElementById("downBtn");
+
+        var rotateValue = circle.style.transform;
+        var rotateSum;
+
+        upBtn.onclick = function () {
+            /* 反時計回りに90°回転させる */
+            rotateSum = rotateValue + "rotate(-90deg)";
+            circle.style.transform = rotateSum;
+            rotateValue = rotateSum;
+        };
+        downBtn.onclick = function () {
+            /* 時計回りに90°回転させる */
+            rotateSum = rotateValue + "rotate(90deg)";
+            circle.style.transform = rotateSum;
+            rotateValue = rotateSum;
+        };
+    </script>
+</body>
+</html>

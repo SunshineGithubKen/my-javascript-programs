@@ -1,0 +1,36 @@
+「CapitalsQuiz」は、首都クイズです。カナダやスイスなど5か国の首都に挑戦しよう。正解数に応じた点数を計算し、地理知識を楽しくチェックできます。ラジオボタンを使った選択形式で、シンプルかつわかりやすいクイズ形式を採用。採点機能は、JavaScriptで正解を自動採点。結果をダイアログボックスで表示。
+
+
+#イベントハンドラ関数（関数）:
+    function Saiten() { }
+クイズの採点を行うための関数。ボタンがクリックされたときにこの関数が実行される。
+
+#DOM操作（Document Object Model）:
+    document.radioB.elements[TrueAns[i]].checked
+documentオブジェクトはHTMLドキュメント全体を表し、要素にアクセスするために使用します。
+この行のコードは、正解のラジオボタンがチェックされているかを確認しています。
+
+#アラートメッセージ:
+    alert("あなたは" + Seikai * 20 + "点でした！");
+alert関数を使用して、採点結果を表示するアラートメッセージを生成します。この行では、正解数に応じた点数が表示されます。
+
+JavaScriptの基本的な機能や構文をカバー。
+イベントハンドラ関数によってアプリケーションの制御が行われ、ドキュメントオブジェクトを介して要素にアクセスし操作します。
+アラートメッセージを用いて、結果をユーザーに表示します。
+
+
+#日商簿記三鷹福祉専門学校 (Javascript基礎演習より)
+
+
+"CapitalsQuiz" is a capital city quiz. Challenge yourself with the capitals of five countries such as Canada and Switzerland. You can enjoy checking your geographical knowledge by calculating your score based on the number of correct answers. The quiz is designed with a simple and easy-to-understand format using radio buttons for selection. The scoring function automatically evaluates the correct answers using JavaScript and displays the result in a dialog box.
+
+Event handler function (function):
+function Saiten() { }
+This is a function used to score the quiz. It gets executed when a button is clicked.
+
+DOM manipulation (Document Object Model):
+document.radioB.elements[TrueAns[i]].checked
+The document object represents the entire HTML document and is used to access elements. This line of code checks if the correct radio button is checked.
+
+alert("You scored " + Seikai * 20 + " points!");
+This uses the alert function to generate an alert message displaying the quiz score. The line shows the points based on the number of correct answers.

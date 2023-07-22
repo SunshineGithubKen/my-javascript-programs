@@ -1,0 +1,39 @@
+「EasyAgeCalc」は、日付計算のアプリで簡単に誕生日からの経過日数と年齢を計算します。入力した誕生日を元に、日数と年齢を瞬時に表示。日付入力と計算ボタンのみで使いやすいUIで、シンプルなインターフェース。365.25日で1年を計算し、より正確な年齢を表示。
+
+#日付オブジェクト:
+    var d1 = new Date(birthday[0], birthday[1] - 1, birthday[2]);
+    var d2 = new Date();
+Dateオブジェクトを使用して日付を扱います。ここでは入力された誕生日情報をもとにd1という日付オブジェクトを作成し、現在の日付に対してd2という日付オブジェクトを作成しています。
+
+#数値計算と結果表示:
+    var diff = d2.getTime() - d1.getTime();
+    var daysPast = Math.floor(diff / (1000 * 60 * 60 * 24));
+    var age = Math.floor(daysPast / 365.25);
+    document.getElementById('daysPast').innerHTML = daysPast;
+    document.getElementById('age').innerHTML = age;
+日数や年齢を計算し、結果を表示するためのコードです。getTimeメソッドを使って日付オブジェクトのミリ秒単位の時刻を取得し、差分を計算しています。そして、daysPast変数に日数を格納し、age変数に年齢を格納します。
+最後に、innerHTMLプロパティを使って結果を表示する要素に結果を代入します。
+
+この演習では、日付オブジェクトを作成し、それを使用して日数や年齢を計算します。
+そして、計算結果をHTML内の要素に反映させて結果を表示します。
+
+
+#日商簿記三鷹福祉専門学校 (Javascript基礎演習より)
+
+"EasyAgeCalc" is a date calculation app that easily calculates the number of days elapsed and the age from a given birthday. Based on the inputted birthday, it instantly displays the number of days and the age. The app features a user-friendly UI with only date input and a calculation button, providing a simple interface. It calculates one year as 365.25 days to display a more accurate age.
+
+Date objects:
+    var d1 = new Date(birthday[0], birthday[1] - 1, birthday[2]);
+    var d2 = new Date();
+Date objects are used to handle dates. Here, a date object named "d1" is created based on the inputted birthday information, and another date object named "d2" is created for the current date.
+
+Numeric calculation and result display:
+    var diff = d2.getTime() - d1.getTime();
+    var daysPast = Math.floor(diff / (1000 * 60 * 60 * 24));
+    var age = Math.floor(daysPast / 365.25);
+    document.getElementById('daysPast').innerHTML = daysPast;
+    document.getElementById('age').innerHTML = age;
+These lines of code calculate the number of days and age and display the results. The getTime method is used to get the millisecond time of the date objects, and the difference is calculated. Then, the variable "daysPast" stores the number of days, and the variable "age" stores the age.
+Finally, the innerHTML property is used to assign the results to the elements that display the output.
+
+In this exercise, date objects are created to calculate the number of days and age. The calculation results are then reflected in HTML elements to display the results.
